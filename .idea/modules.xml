@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/GymTrackApp.iml" filepath="$PROJECT_DIR$/.idea/GymTrackApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/GymTrackApp.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

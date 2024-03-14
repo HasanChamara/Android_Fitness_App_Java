@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_home_card_1.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\home_card_1.png"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_home_card_2.jpeg.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\home_card_2.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_home.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\home.png"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_coach_dash.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_coach_dash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\menu_bottom_navigation_menu_customer.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\menu\\bottom_navigation_menu_customer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_profile.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\profile.png"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_manageuser.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_manageuser.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_home_card_3.jpg.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\home_card_3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_bottom_navigation_cus_selected_item_color.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\bottom_navigation_cus_selected_item_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_payment.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_payment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_rounded_background.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\rounded_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_manage_user_card_1.jpg.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\manage_user_card_1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_fitnesslogo.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\fitnesslogo.png"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_edittext_border_black.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\edittext_border_black.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_profile_i.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\profile_i.png"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_setting.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\setting.png"
+    },
+    {
+        "merged": "com.example.gymtrackapp-merged_res-33:/layout_fragment_profile.xml.flat",
+        "source": "com.example.gymtrackapp-main-35:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_coach_login.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_coach_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_workout_schedule.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_workout_schedule.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_dolor.png.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\dolor.png"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\drawable_add_work_schedule.jpg.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\drawable\\add_work_schedule.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_fragment_setting.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\fragment_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-merged_res-33:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Isuru\\.gradle\\daemon\\8.0\\com.example.gymtrackapp-main-35:\\layout\\activity_login.xml"
+    }
+]

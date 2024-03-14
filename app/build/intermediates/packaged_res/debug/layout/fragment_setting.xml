@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SettingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="30dp"
+                android:layout_marginVertical="150dp"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold"
+                    android:text="Biometric Details"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:required="true"
+                    android:textSize="28dp" />
+
+
+
+                <EditText
+                    android:id="@+id/editTextAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="#000000"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:required="true"
+                    android:textColorHint="#CCCCCC"
+                    android:background="@drawable/edittext_border_black"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="8dp"
+                    android:hint="Age"
+                    android:inputType="text" />
+
+
+
+                <EditText
+                    android:id="@+id/editTextWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:required="true"
+                    android:layout_below="@id/editTextAge"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_border_black"
+                    android:hint="Weight"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#CCCCCC" />
+
+                <EditText
+                    android:id="@+id/editTextHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:required="true"
+                    android:layout_below="@id/editTextWeight"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_border_black"
+                    android:hint="Weight"
+                    android:paddingLeft="10dp"
+                    android:textSize="15dp"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#CCCCCC" />
+
+                <Spinner
+                    android:id="@+id/spinnerGoal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_border_black"
+                    android:layout_below="@id/editTextHeight"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="15dp"
+                    android:layout_below="@id/spinnerGoal"
+                    android:background="@color/purple_500"
+                    android:layout_marginTop="16dp"
+                    android:text="Submit" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/spinnerGoal"
+                    android:layout_marginTop="16dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:indeterminate="true"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

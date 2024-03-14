@@ -1,0 +1,279 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.gymtrackapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:10:5-79
+13-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:10:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:11:5-67
+14-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:11:22-64
+15    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+15-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Isuru\.gradle\caches\transforms-3\6b4b5c2e78acc3898eeaed389f62614c\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+15-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Isuru\.gradle\caches\transforms-3\6b4b5c2e78acc3898eeaed389f62614c\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+16
+17    <permission
+17-->[androidx.core:core:1.9.0] C:\Users\Isuru\.gradle\caches\transforms-3\7d9ccfe7fe75057cfe0284e1ab98fed7\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+18        android:name="com.example.gymtrackapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.9.0] C:\Users\Isuru\.gradle\caches\transforms-3\7d9ccfe7fe75057cfe0284e1ab98fed7\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.9.0] C:\Users\Isuru\.gradle\caches\transforms-3\7d9ccfe7fe75057cfe0284e1ab98fed7\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.example.gymtrackapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.9.0] C:\Users\Isuru\.gradle\caches\transforms-3\7d9ccfe7fe75057cfe0284e1ab98fed7\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.9.0] C:\Users\Isuru\.gradle\caches\transforms-3\7d9ccfe7fe75057cfe0284e1ab98fed7\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:5:5-45:19
+24        android:allowBackup="true"
+24-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:6:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.9.0] C:\Users\Isuru\.gradle\caches\transforms-3\7d9ccfe7fe75057cfe0284e1ab98fed7\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+26        android:dataExtractionRules="@xml/data_extraction_rules"
+26-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:7:9-65
+27        android:debuggable="true"
+28        android:extractNativeLibs="false"
+29        android:fullBackupContent="@xml/backup_rules"
+29-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:8:9-54
+30        android:icon="@mipmap/ic_launcher"
+30-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:9:9-43
+31        android:label="@string/app_name"
+31-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:10:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:11:9-54
+33        android:supportsRtl="true"
+33-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:12:9-35
+34        android:testOnly="true"
+35        android:theme="@style/Theme.GymTrackApp" >
+35-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:13:9-49
+36        <activity
+36-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:15:9-17:40
+37            android:name="com.example.gymtrackapp.activities.WorkoutScheduleActivity"
+37-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:16:13-63
+38            android:exported="false" />
+38-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:17:13-37
+39        <activity
+39-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:18:9-20:40
+40            android:name="com.example.gymtrackapp.activities.PaymentActivity"
+40-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:19:13-55
+41            android:exported="false" />
+41-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:20:13-37
+42        <activity
+42-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:21:9-23:40
+43            android:name="com.example.gymtrackapp.activities.ManageuserActivity"
+43-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:22:13-58
+44            android:exported="false" />
+44-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:23:13-37
+45        <activity
+45-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:24:9-26:40
+46            android:name="com.example.gymtrackapp.activities.CoachLoginActivity"
+46-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:25:13-58
+47            android:exported="false" />
+47-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:26:13-37
+48        <activity
+48-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:27:9-29:40
+49            android:name="com.example.gymtrackapp.activities.CoachDashActivity"
+49-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:28:13-57
+50            android:exported="false" />
+50-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:29:13-37
+51        <activity
+51-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:30:9-32:40
+52            android:name="com.example.gymtrackapp.activities.RegisterActivity"
+52-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:31:13-56
+53            android:exported="false" />
+53-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:32:13-37
+54        <activity
+54-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:33:9-35:40
+55            android:name="com.example.gymtrackapp.activities.LoginActivity"
+55-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:34:13-53
+56            android:exported="false" />
+56-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:35:13-37
+57        <activity
+57-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:36:9-44:20
+58            android:name="com.example.gymtrackapp.MainActivity"
+58-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:37:13-41
+59            android:exported="true" >
+59-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:38:13-36
+60            <intent-filter>
+60-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:39:13-43:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:40:17-69
+61-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:40:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:42:17-77
+63-->D:\Android Studio Project\Android_Fitness_App_Java\app\src\main\AndroidManifest.xml:42:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <service
+67-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:14:9-23:19
+68            android:name="com.google.firebase.components.ComponentDiscoveryService"
+68-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:15:13-84
+69            android:directBootAware="true"
+69-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+70            android:exported="false" >
+70-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:16:13-37
+71            <meta-data
+71-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:17:13-19:85
+72                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+72-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:18:17-122
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:19:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:20:13-22:85
+75                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+75-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:21:17-111
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-firestore:24.10.3] C:\Users\Isuru\.gradle\caches\transforms-3\991fdf8f5e77556a8938ad5fcb6b08a4\transformed\firebase-firestore-24.10.3\AndroidManifest.xml:22:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+78                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+78-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+80            <meta-data
+80-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\9739b6e2a91c9faf75df695b066e0ee4\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+81                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+81-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\9739b6e2a91c9faf75df695b066e0ee4\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\9739b6e2a91c9faf75df695b066e0ee4\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+84                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+84-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+86        </service>
+87
+88        <activity
+88-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+89            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+89-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+90            android:excludeFromRecents="true"
+90-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+91            android:exported="true"
+91-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+92            android:launchMode="singleTask"
+92-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+93-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+94            <intent-filter>
+94-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+95                <action android:name="android.intent.action.VIEW" />
+95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+96
+97                <category android:name="android.intent.category.DEFAULT" />
+97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+98                <category android:name="android.intent.category.BROWSABLE" />
+98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+99
+100                <data
+100-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+101                    android:host="firebase.auth"
+101-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+102                    android:path="/"
+102-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+103                    android:scheme="genericidp" />
+103-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+104            </intent-filter>
+105        </activity>
+106        <activity
+106-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+107            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+107-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+108            android:excludeFromRecents="true"
+108-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+109            android:exported="true"
+109-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+110            android:launchMode="singleTask"
+110-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+111            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+111-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+112            <intent-filter>
+112-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+113                <action android:name="android.intent.action.VIEW" />
+113-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+113-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+114
+115                <category android:name="android.intent.category.DEFAULT" />
+115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+116                <category android:name="android.intent.category.BROWSABLE" />
+116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+117
+118                <data
+118-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+119                    android:host="firebase.auth"
+119-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+120                    android:path="/"
+120-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+121                    android:scheme="recaptcha" />
+121-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Isuru\.gradle\caches\transforms-3\e34c55939f4d5a328a32c2563dbfe5cf\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+122            </intent-filter>
+123        </activity>
+124        <activity
+124-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Isuru\.gradle\caches\transforms-3\bdb21094a60e64ce4634e1111a95e437\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+125            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+125-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Isuru\.gradle\caches\transforms-3\bdb21094a60e64ce4634e1111a95e437\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+126            android:exported="false"
+126-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Isuru\.gradle\caches\transforms-3\bdb21094a60e64ce4634e1111a95e437\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+127            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+127-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Isuru\.gradle\caches\transforms-3\bdb21094a60e64ce4634e1111a95e437\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+128
+129        <provider
+129-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+130            android:name="com.google.firebase.provider.FirebaseInitProvider"
+130-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+131            android:authorities="com.example.gymtrackapp.firebaseinitprovider"
+131-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+132            android:directBootAware="true"
+132-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+133            android:exported="false"
+133-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+134            android:initOrder="100" />
+134-->[com.google.firebase:firebase-common:20.4.2] C:\Users\Isuru\.gradle\caches\transforms-3\6f3a5e06191e566386bfc53841cfd7a1\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+135
+136        <meta-data
+136-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Isuru\.gradle\caches\transforms-3\60b308fd255f2e8154c869537aadbcc8\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+137            android:name="com.google.android.gms.version"
+137-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Isuru\.gradle\caches\transforms-3\60b308fd255f2e8154c869537aadbcc8\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+138            android:value="@integer/google_play_services_version" />
+138-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\Isuru\.gradle\caches\transforms-3\60b308fd255f2e8154c869537aadbcc8\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+139
+140        <provider
+140-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+141            android:name="androidx.startup.InitializationProvider"
+141-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+142            android:authorities="com.example.gymtrackapp.androidx-startup"
+142-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+143            android:exported="false" >
+143-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+144            <meta-data
+144-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+145                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+145-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+146                android:value="androidx.startup" />
+146-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Isuru\.gradle\caches\transforms-3\2f2ee9bdfdf8de8f2efa09a2916e8416\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+147            <meta-data
+147-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Isuru\.gradle\caches\transforms-3\d861077ba3188c75fdd0738ce90eb6a6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+148                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+148-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Isuru\.gradle\caches\transforms-3\d861077ba3188c75fdd0738ce90eb6a6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+149                android:value="androidx.startup" />
+149-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Isuru\.gradle\caches\transforms-3\d861077ba3188c75fdd0738ce90eb6a6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+150        </provider>
+151    </application>
+152
+153</manifest>

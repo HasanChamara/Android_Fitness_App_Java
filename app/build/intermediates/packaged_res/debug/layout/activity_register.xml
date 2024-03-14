@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/back2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:layout_marginVertical="50dp"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="113dp"
+                android:layout_height="84dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="88dp"
+                android:layout_marginEnd="89dp"
+                android:src="@drawable/fitnesslogo" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:text="Member Registration"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:required="true"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#000000"
+                android:layout_below="@id/title"
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:required="true"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/edittext_border_black"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editStudentId"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#000000"
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:required="true"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/edittext_border_black"
+                android:layout_below="@id/editTextName"
+                android:layout_marginTop="8dp"
+                android:hint="Student Id"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#000000"
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:required="true"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/edittext_border_black"
+                android:layout_below="@id/editStudentId"
+                android:layout_marginTop="8dp"
+                android:hint="Email"
+                android:inputType="text" />
+
+
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="#000000"
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:required="true"
+                android:textColorHint="#CCCCCC"
+                android:background="@drawable/edittext_border_black"
+                android:layout_below="@id/editTextEmail"
+                android:layout_marginTop="8dp"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:required="true"
+                android:layout_below="@id/editTextPassword"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_border_black"
+                android:hint="Confirm Password"
+                android:paddingLeft="10dp"
+                android:textSize="15dp"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#CCCCCC" />
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="15dp"
+                android:layout_below="@id/editTextConfirmPassword"
+                android:background="@color/purple_500"
+                android:layout_marginTop="16dp"
+                android:text="Register" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/editTextConfirmPassword"
+                android:layout_marginTop="16dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? Login"
+                android:textColor="@color/black"
+                android:clickable="true"
+                android:onClick="goToLogin"
+                android:layout_below="@id/registerButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

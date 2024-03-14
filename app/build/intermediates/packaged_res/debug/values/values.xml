@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="goal_options">
+        <item>Select ....</item>
+        <item>Muscle Building</item>
+        <item>Fat</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="splash_background">#FFFFFF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">GymTrackApp</string>
+    <string name="gcm_defaultSenderId" translatable="false">194584399954</string>
+    <string name="google_api_key" translatable="false">AIzaSyA7oZkZZDe_eAunljKV0uMpGaVKw6McQEI</string>
+    <string name="google_app_id" translatable="false">1:194584399954:android:8960e8a8ecd31e471f4f8b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA7oZkZZDe_eAunljKV0uMpGaVKw6McQEI</string>
+    <string name="google_storage_bucket" translatable="false">gymtrack-b2a67.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_id" translatable="false">gymtrack-b2a67</string>
+    <style name="Base.Theme.GymTrackApp" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.GymTrackApp" parent="Base.Theme.GymTrackApp"/>
+</resources>

@@ -13,6 +13,27 @@
         android:theme="@style/Theme.GymTrackApp"
         tools:targetApi="31">
         <activity
+            android:name=".activities.WorkoutScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ManageuserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CoachLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CoachDashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

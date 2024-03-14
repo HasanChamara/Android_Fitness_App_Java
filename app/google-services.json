@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "194584399954",
+    "project_id": "gymtrack-b2a67",
+    "storage_bucket": "gymtrack-b2a67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194584399954:android:8960e8a8ecd31e471f4f8b",
+        "android_client_info": {
+          "package_name": "com.example.gymtrackapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7oZkZZDe_eAunljKV0uMpGaVKw6McQEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -25,7 +25,7 @@
             android:name=".activities.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.ManageuserActivity"
+            android:name=".activities.ManageUserActivity"
             android:exported="false" />
         <activity
             android:name=".activities.CoachLoginActivity"

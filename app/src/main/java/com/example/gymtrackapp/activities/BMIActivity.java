@@ -62,7 +62,7 @@ public class BMIActivity extends AppCompatActivity {
                     return;
                 }
             }
-            resultTextView.setText("Biometric details not found for this user");
+            resultTextView.setText("Biometric details not found for this user please fill your biometric details");
         }).addOnFailureListener(e -> {
             resultTextView.setText("Error fetching biometric details: " + e.getMessage());
         });

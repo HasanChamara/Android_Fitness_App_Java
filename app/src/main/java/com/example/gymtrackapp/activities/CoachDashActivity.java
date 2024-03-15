@@ -17,7 +17,7 @@ public class CoachDashActivity extends AppCompatActivity {
     }
 
     public void goToManageUser(View view) {
-        Intent intent = new Intent(this, ManageuserActivity.class);
+        Intent intent = new Intent(this, ManageUserActivity.class);
         startActivity(intent);
     }
 }

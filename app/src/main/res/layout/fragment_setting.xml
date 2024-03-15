@@ -10,8 +10,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
         <ScrollView
@@ -25,8 +24,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="30dp"
-                android:layout_marginVertical="150dp"
+                android:padding="25dp"
+                android:layout_marginVertical="10dp"
                 tools:ignore="MissingConstraints">
 
 
@@ -42,7 +41,48 @@
                     android:required="true"
                     android:textSize="28dp" />
 
+                <TextView
+                    android:id="@+id/genderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Gender:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="20dp" />
 
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/genderLabel"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Female" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/ageLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/radioGroupGender"
+                    android:layout_marginTop="20dp" />
 
                 <EditText
                     android:id="@+id/editTextAge"
@@ -54,66 +94,110 @@
                     android:required="true"
                     android:textColorHint="#CCCCCC"
                     android:background="@drawable/edittext_border_black"
-                    android:layout_below="@id/title"
+                    android:layout_below="@id/ageLabel"
                     android:layout_marginTop="8dp"
-                    android:hint="Age"
-                    android:inputType="text" />
+                    android:inputType="number" />
 
-
+                <TextView
+                    android:id="@+id/weightLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weight:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/editTextAge"
+                    android:layout_marginTop="20dp" />
 
                 <EditText
                     android:id="@+id/editTextWeight"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:required="true"
-                    android:layout_below="@id/editTextAge"
+                    android:layout_below="@id/weightLabel"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edittext_border_black"
-                    android:hint="Weight"
                     android:paddingLeft="10dp"
                     android:textSize="15dp"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:textColor="#000000"
                     android:textColorHint="#CCCCCC" />
+
+                <TextView
+                    android:id="@+id/heightLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Height:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/editTextWeight"
+                    android:layout_marginTop="20dp" />
 
                 <EditText
                     android:id="@+id/editTextHeight"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:required="true"
-                    android:layout_below="@id/editTextWeight"
+                    android:layout_below="@id/heightLabel"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/edittext_border_black"
-                    android:hint="Weight"
                     android:paddingLeft="10dp"
                     android:textSize="15dp"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:textColor="#000000"
                     android:textColorHint="#CCCCCC" />
+
+                <TextView
+                    android:id="@+id/goalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Goal:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/editTextHeight"
+                    android:layout_marginTop="20dp" />
 
                 <Spinner
                     android:id="@+id/spinnerGoal"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/edittext_border_black"
-                    android:layout_below="@id/editTextHeight"
+                    android:layout_below="@id/goalLabel"
                     android:layout_marginTop="8dp"/>
 
-                <Button
-                    android:id="@+id/loginButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:textSize="15dp"
+                <TextView
+                    android:id="@+id/activityLevelLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Activity Level:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:layout_below="@id/spinnerGoal"
-                    android:background="@color/purple_500"
-                    android:layout_marginTop="16dp"
-                    android:text="Submit" />
+                    android:layout_marginTop="20dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerGoalActivityLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/edittext_border_black"
+                    android:layout_below="@id/activityLevelLabel"
+                    android:layout_marginTop="8dp"/>
+
+
 
                 <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@id/spinnerGoal"
-                    android:layout_marginTop="16dp">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/spinnerGoalActivityLevel"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentRight="true">
+
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:textSize="15sp"
+                        android:text="Submit"
+                        android:background="@color/purple_500" />
 
                     <ProgressBar
                         android:id="@+id/progressBar"
@@ -125,12 +209,10 @@
 
                 </FrameLayout>
 
+
             </RelativeLayout>
         </ScrollView>
 
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </FrameLayout>

@@ -6,7 +6,15 @@
     <string-array name="goal_options">
         <item>Select ....</item>
         <item>Muscle Building</item>
-        <item>Fat</item>
+        <item>Fat Lost</item>
     </string-array>
 
+    <string-array name="activity_level">
+        <item>Select ....</item>
+        <item>Light: exercise 1-3 times/week</item>
+        <item>Moderate: exercise 4-5 times/week</item>
+        <item>Active: daily exercise</item>
+        <item>Very Active: intense exercise 6-7 times/week</item>
+        <item>Extra Active: very intense exercise daily</item>
+    </string-array>
 </resources>

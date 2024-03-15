@@ -6,46 +6,66 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.gymtrackapp.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 public class BMIActivity extends AppCompatActivity {
 
-    EditText weightEditText, heightEditText;
     TextView resultTextView;
-    Button calculateButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmiactivity);
 
-        weightEditText = findViewById(R.id.weightEditText);
-        heightEditText = findViewById(R.id.heightEditText);
-        resultTextView = findViewById(R.id.resultTextView);
-        calculateButton = findViewById(R.id.calculateButton);
 
-        calculateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculateBMI();
-            }
-        });
+        resultTextView = findViewById(R.id.resultTextView);
+
+
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            String userID = currentUser.getUid();
+            fetchBiometricDetailsAndCalculateBMI(userID);
+        } else {
+            Toast.makeText(BMIActivity.this, "You are not logged in. Please log in to save biometric details.", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    private void calculateBMI() {
-        String weightStr = weightEditText.getText().toString();
-        String heightStr = heightEditText.getText().toString();
+    private void fetchBiometricDetailsAndCalculateBMI(String userID) {
 
-        if (!weightStr.isEmpty() && !heightStr.isEmpty()) {
-            float weight = Float.parseFloat(weightStr);
-            float height = Float.parseFloat(heightStr) / 100; // converting height to meters
 
-            float bmi = calculateBMIValue(weight, height);
-            displayBMIResult(bmi);
-        } else {
-            resultTextView.setText("Please enter weight and height");
-        }
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CollectionReference biometricDetailsRef = db.collection("biometricDetails");
+
+        Query query = biometricDetailsRef.whereEqualTo("userID", userID);
+
+        query.get().addOnSuccessListener(querySnapshot  -> {
+            for (DocumentSnapshot documentSnapshot : querySnapshot.getDocuments()) {
+                Double weightDouble = documentSnapshot.getDouble("weight");
+                Double heightDouble = documentSnapshot.getDouble("height");
+
+                if (weightDouble != null && heightDouble != null) {
+                    float weight = weightDouble.floatValue();
+                    float height = heightDouble.floatValue() / 100;
+
+                    float bmi = calculateBMIValue(weight, height);
+                    displayBMIResult(bmi);
+                    return;
+                }
+            }
+            resultTextView.setText("Biometric details not found for this user");
+        }).addOnFailureListener(e -> {
+            resultTextView.setText("Error fetching biometric details: " + e.getMessage());
+        });
     }
 
     private float calculateBMIValue(float weight, float height) {
@@ -67,5 +87,4 @@ public class BMIActivity extends AppCompatActivity {
         String result = "BMI: " + String.format("%.2f", bmi) + "\nCategory: " + bmiCategory;
         resultTextView.setText(result);
     }
-
 }

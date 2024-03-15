@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.gymtrackapp.R;
+import com.example.gymtrackapp.activities.BMIActivity;
 import com.example.gymtrackapp.activities.CoachLoginActivity;
 import com.example.gymtrackapp.activities.PaymentActivity;
 import com.example.gymtrackapp.activities.WorkoutScheduleActivity;
@@ -75,14 +76,20 @@ public class HomeFragment extends Fragment {
 
 
        LinearLayout mealPlanButton = rootView.findViewById(R.id.mealPlanButton);
+       LinearLayout BMIButton = rootView.findViewById(R.id.BMIButton);
 
-    mealPlanButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            goToMealPlan();
-        }
-    });
-
+        mealPlanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToMealPlan();
+            }
+        });
+        BMIButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToBMI();
+            }
+        });
         return rootView;
     }
 
@@ -116,6 +123,10 @@ public class HomeFragment extends Fragment {
                 .addOnFailureListener(e -> {
                     Toast.makeText(requireContext(), "failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 });
+    }
+    public void goToBMI() {
+            Intent bmiActivity = new Intent(requireContext(), BMIActivity.class);
+            startActivity(bmiActivity);
     }
 
 }

@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.gymtrackapp.R;
 import com.example.gymtrackapp.activities.BMIActivity;
 import com.example.gymtrackapp.activities.CoachLoginActivity;
+import com.example.gymtrackapp.activities.MealPlanActivity;
 import com.example.gymtrackapp.activities.PaymentActivity;
 import com.example.gymtrackapp.activities.WorkoutScheduleActivity;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -112,7 +113,7 @@ public class HomeFragment extends Fragment {
                             Intent paymentIntent = new Intent(requireContext(), PaymentActivity.class);
                             startActivity(paymentIntent);
                         } else {
-                            Intent workoutPlanIntent = new Intent(requireContext(), WorkoutScheduleActivity.class);
+                            Intent workoutPlanIntent = new Intent(requireContext(), MealPlanActivity.class);
                             startActivity(workoutPlanIntent);
                         }
                     } else {

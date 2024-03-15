@@ -107,7 +107,7 @@ public class SettingFragment extends Fragment {
 
         progressBar = rootView.findViewById(R.id.progressBar);
 
-         submitButton = rootView.findViewById(R.id.submitButton);
+        submitButton = rootView.findViewById(R.id.submitButton);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(requireContext(), R.array.goal_options, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

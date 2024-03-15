@@ -130,4 +130,9 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CoachLoginActivity.class);
         startActivity(intent);
     }
+
+    public void goToBMI(View view) {
+        Intent intent = new Intent(this, BMIActivity.class);
+        startActivity(intent);
+    }
 }

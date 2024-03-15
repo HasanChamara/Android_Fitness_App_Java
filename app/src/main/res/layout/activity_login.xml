@@ -142,6 +142,18 @@
                 android:layout_marginTop="16dp"
                 android:text="Coach Login" />
 
+            <!--BMI Activity Route -->
+            <Button
+                android:id="@+id/bmiButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:onClick="goToBMI"
+                android:layout_below="@id/loginText"
+                android:background="@color/purple_500"
+                android:layout_marginTop="16dp"
+                android:text="BMI" />
+
         </RelativeLayout>
     </ScrollView>
 

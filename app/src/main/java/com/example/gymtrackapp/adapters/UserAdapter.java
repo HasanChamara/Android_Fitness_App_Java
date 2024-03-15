@@ -1,5 +1,7 @@
 package com.example.gymtrackapp.adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,15 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gymtrackapp.R;
+import com.example.gymtrackapp.activities.ViewUserDataActivity;
 import com.example.gymtrackapp.models.User;
 
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
     private List<User> userList;
+    private Context context;
 
-    public UserAdapter(List<User> userList) {
+    public UserAdapter(List<User> userList, Context context) {
         this.userList = userList;
+        this.context = context;
     }
 
     @NonNull
@@ -31,6 +36,18 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
         User user = userList.get(position);
         holder.bind(user);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String userId = user.getUserId();
+
+                Intent intent = new Intent(context, ViewUserDataActivity.class);
+                intent.putExtra("userId", userId);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -41,24 +41,24 @@ public class CoachLoginActivity extends AppCompatActivity {
     }
 
     private void loginUser(String email, String password) {
-        if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show();
-            return;
-        }
+//        if (email.isEmpty() || password.isEmpty()) {
+//            Toast.makeText(this, "All fields are required", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
+//
+//        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+//            Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show();
+//            return;
+//        }
 
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            Toast.makeText(this, "Invalid email address", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if (email.equals("admin@gmail.com") && password.equals("admin123")) {
+//        if (email.equals("admin@gmail.com") && password.equals("admin123")) {
             Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
 
             Intent intent = new Intent(this, CoachDashActivity.class);
             startActivity(intent);
 
-        } else {
-            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
-        }
+//        } else {
+//            Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+//        }
     }
 }

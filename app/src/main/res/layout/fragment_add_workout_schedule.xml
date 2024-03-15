@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddWorkoutScheduleFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bench Press"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextBenchPressSets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sets" />
+
+        <EditText
+            android:id="@+id/editTextBenchPressReps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reps" />
+
+        <EditText
+            android:id="@+id/editTextBenchPressWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Weight (kg)" />
+
+
+
+        <Button
+            android:id="@+id/buttonAddWorkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Workout" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

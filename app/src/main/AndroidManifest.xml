@@ -13,6 +13,12 @@
         android:theme="@style/Theme.GymTrackApp"
         tools:targetApi="31">
         <activity
+            android:name=".activities.AddScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ViewUserDataActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MealPlanActivity"
             android:exported="false" />
         <activity

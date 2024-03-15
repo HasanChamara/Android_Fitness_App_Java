@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.example.gymtrackapp.R;
 import com.example.gymtrackapp.adapters.UserAdapter;
@@ -21,6 +23,7 @@ public class ManageUserActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private UserAdapter adapter;
     private List<User> userList;
+    private ProgressBar loadingProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,17 +33,23 @@ public class ManageUserActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        loadingProgressBar = findViewById(R.id.loadingProgressBar);
+
         userList = new ArrayList<>();
 
-        adapter = new UserAdapter(userList);
+        adapter = new UserAdapter(userList, this);
         recyclerView.setAdapter(adapter);
 
         loadUsers();
+
     }
 
     private void loadUsers() {
 
         userList.clear();
+
+        loadingProgressBar.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.GONE);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference usersRef = db.collection("users");
@@ -56,10 +65,14 @@ public class ManageUserActivity extends AppCompatActivity {
 
                         User user = new User(userId, name, email, studentId, paymentStatus);
                         userList.add(user);
+                        loadingProgressBar.setVisibility(View.GONE);
+                        recyclerView.setVisibility(View.VISIBLE);
                     }
                     adapter.notifyDataSetChanged();
                 })
                 .addOnFailureListener(e -> {
+                    loadingProgressBar.setVisibility(View.GONE);
+                    recyclerView.setVisibility(View.VISIBLE);
                     Log.e("ManageUserActivity", "Error fetching users: " + e.getMessage());
                 });
     }

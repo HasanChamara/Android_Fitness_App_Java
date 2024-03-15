@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+  <TextView
+      android:id="@+id/userNameTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Name"
+      android:textStyle="bold"
+      android:textSize="18sp"
+      android:layout_marginTop="16dp"/>
+
+  <TextView
+      android:id="@+id/emailTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Email"
+      android:textSize="16sp"
+      android:layout_below="@id/userNameTextView"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/studentIdTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Student ID"
+      android:textSize="16sp"
+      android:layout_below="@id/emailTextView"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/paymentStatusTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Payment Status"
+      android:textSize="16sp"
+      android:layout_below="@id/studentIdTextView"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/activityLevelTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Activity Level"
+      android:textSize="16sp"
+      android:layout_below="@id/paymentStatusTextView"
+      android:layout_marginTop="16dp"/>
+
+  <TextView
+      android:id="@+id/goalTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Goal"
+      android:textSize="16sp"
+      android:layout_below="@id/activityLevelTextView"
+      android:layout_marginTop="16dp"/>
+
+  <TextView
+      android:id="@+id/genderTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Gender"
+      android:textSize="16sp"
+      android:layout_below="@id/goalTextView"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/ageTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Age"
+      android:textSize="16sp"
+      android:layout_below="@id/genderTextView"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/weightTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Weight"
+      android:textSize="16sp"
+      android:layout_below="@id/ageTextView"
+      android:layout_marginTop="8dp"/>
+
+  <TextView
+      android:id="@+id/heightTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Height"
+      android:textSize="16sp"
+      android:layout_below="@id/weightTextView"
+      android:layout_marginTop="8dp"/>
+  <Button
+      android:id="@+id/workOutScheduleAdd"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/heightTextView"
+      android:text="Add Workout Schedule"/>
+</RelativeLayout>

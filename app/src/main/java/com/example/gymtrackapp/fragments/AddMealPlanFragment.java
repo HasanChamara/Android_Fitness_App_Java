@@ -25,29 +25,13 @@ public class AddMealPlanFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    public AddMealPlanFragment() {
-        // Required empty public constructor
+    private String userId;
+    public AddMealPlanFragment(String userId) {
+        this.userId = userId;
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment AddMealPlanFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static AddMealPlanFragment newInstance(String param1, String param2) {
-        AddMealPlanFragment fragment = new AddMealPlanFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static AddMealPlanFragment newInstance(String userId) {
+        return new AddMealPlanFragment(userId);
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

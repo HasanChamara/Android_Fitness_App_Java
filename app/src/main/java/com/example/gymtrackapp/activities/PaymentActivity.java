@@ -30,7 +30,6 @@ public class PaymentActivity extends AppCompatActivity {
 
         statusTextView = findViewById(R.id.status_text_view);
 
-            // Create the InitRequest object
             InitRequest req = new InitRequest();
             req.setMerchantId("1223594");
             req.setMerchantSecret("MTIxNjYwMjk3NjY3MjEzMTkxMjIzMzM1ODkwMDAyODY4NjA1ODA3");
@@ -48,13 +47,11 @@ public class PaymentActivity extends AppCompatActivity {
             req.getCustomer().getAddress().setCity("Colombo");
             req.getCustomer().getAddress().setCountry("Sri Lanka");
 
-            // Optional Params
             req.getCustomer().getDeliveryAddress().setAddress("No.2, Kandy Road");
             req.getCustomer().getDeliveryAddress().setCity("Kadawatha");
             req.getCustomer().getDeliveryAddress().setCountry("Sri Lanka");
             req.getItems().add(new Item(null, "Door bell wireless", 1, 1000.0));
 
-            // Start the PayHere activity
             Intent intent = new Intent(PaymentActivity.this, PHMainActivity.class);
             intent.putExtra(PHConstants.INTENT_EXTRA_DATA, req);
             PHConfigs.setBaseUrl(PHConfigs.SANDBOX_URL);
@@ -71,12 +68,12 @@ public class PaymentActivity extends AppCompatActivity {
                     if (response.isSuccess()) {
                         String msg = "Payment successful. Transaction ID: " + response.getData();
                         statusTextView.setText(msg);
-                        // Navigate to success activity here
+
                         startActivity(new Intent(PaymentActivity.this, MealPlanActivity.class));
                     } else {
                         String errorMsg = "Payment failed. Reason: " + response.getData().getMessage();
                         statusTextView.setText(errorMsg);
-                        // Handle payment failure here, e.g., show a toast message
+                        
                         Toast.makeText(PaymentActivity.this, "Payment failed", Toast.LENGTH_SHORT).show();
                     }
                 } else {

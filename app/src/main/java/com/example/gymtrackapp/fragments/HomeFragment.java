@@ -10,16 +10,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.gymtrackapp.R;
 import com.example.gymtrackapp.activities.BMIActivity;
-import com.example.gymtrackapp.activities.CoachLoginActivity;
 import com.example.gymtrackapp.activities.MealPlanActivity;
 import com.example.gymtrackapp.activities.PaymentActivity;
-import com.example.gymtrackapp.activities.WorkoutScheduleActivity;
+import com.example.gymtrackapp.activities.WorkoutActivity;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -77,7 +75,9 @@ public class HomeFragment extends Fragment {
 
 
        LinearLayout mealPlanButton = rootView.findViewById(R.id.mealPlanButton);
-       LinearLayout BMIButton = rootView.findViewById(R.id.BMIButton);
+        LinearLayout BMIButton = rootView.findViewById(R.id.BMIButton);
+        LinearLayout workOutButton = rootView.findViewById(R.id.workOutButton);
+
 
         mealPlanButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +89,12 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 goToBMI();
+            }
+        });
+        workOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goWorkOut();
             }
         });
         return rootView;
@@ -129,5 +135,37 @@ public class HomeFragment extends Fragment {
             Intent bmiActivity = new Intent(requireContext(), BMIActivity.class);
             startActivity(bmiActivity);
     }
+    public void goWorkOut() {
+        SharedPreferences sharedPreferences = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String userEmail = sharedPreferences.getString("userEmail", "");
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("users")
+                .whereEqualTo("email", userEmail)
+                .get()
+                .addOnSuccessListener(querySnapshot -> {
+                    if (!querySnapshot.isEmpty()) {
+                        DocumentSnapshot document = querySnapshot.getDocuments().get(0);
+                        String paymentStatus = document.getString("paymentStatus");
+
+                        if ("pending".equals(paymentStatus)) {
+                            Toast.makeText(requireContext(), "Please make a payment first", Toast.LENGTH_SHORT).show();
+                            Intent paymentIntent = new Intent(requireContext(), PaymentActivity.class);
+                            startActivity(paymentIntent);
+                        } else {
+                            Intent workoutPlanIntent = new Intent(requireContext(), WorkoutActivity.class);
+                            startActivity(workoutPlanIntent);
+                        }
+                    } else {
+
+                        Toast.makeText(requireContext(), "User not found", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    Toast.makeText(requireContext(), "failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                });
+    }
+
 
 }

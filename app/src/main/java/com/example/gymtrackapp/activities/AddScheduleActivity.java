@@ -25,31 +25,30 @@ public class AddScheduleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_schedule);
 
-        // Get the ViewPager and TabLayout
         ViewPager viewPager = findViewById(R.id.viewPager);
         TabLayout tabLayout = findViewById(R.id.tabLayout);
 
-        // Create an adapter for the ViewPager
-        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager());
+        String userId = getIntent().getStringExtra("userId");
 
-        // Add fragments to the adapter
-        adapter.addFragment(new AddWorkoutScheduleFragment(), "Add Workout Schedule");
-        adapter.addFragment(new AddMealPlanFragment(), "Add Meal Plan");
+        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), userId);
 
-        // Set the adapter to the ViewPager
+        adapter.addFragment(AddWorkoutScheduleFragment.newInstance(userId), "Add Workout Schedule");
+        adapter.addFragment(AddMealPlanFragment.newInstance(userId), "Add Meal Plan");
+
+
         viewPager.setAdapter(adapter);
 
-        // Connect the TabLayout with the ViewPager
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    // Adapter class for the ViewPager
     private static class PagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> fragmentList = new ArrayList<>();
         private final List<String> fragmentTitleList = new ArrayList<>();
+        private String userId;
 
-        PagerAdapter(FragmentManager fm) {
+        PagerAdapter(FragmentManager fm, String userId) {
             super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+            this.userId = userId;
         }
 
         @NonNull

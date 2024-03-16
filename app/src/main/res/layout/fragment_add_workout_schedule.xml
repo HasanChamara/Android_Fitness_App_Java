@@ -3,47 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddWorkoutScheduleFragment">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    tools:context=".fragments.AddMealPlanFragment">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <TextView
+        <Button
+            android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bench Press"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editTextBenchPressSets"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Sets" />
-
-        <EditText
-            android:id="@+id/editTextBenchPressReps"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Reps" />
-
-        <EditText
-            android:id="@+id/editTextBenchPressWeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Weight (kg)" />
-
+            android:text="Add Exercise"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentRight="true"/>
 
 
         <Button
-            android:id="@+id/buttonAddWorkout"
+            android:id="@+id/submitExercise"
             android:layout_width="wrap_content"
+            android:text="Submit Exercise"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addedExerciseRecyclerView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Workout" />
+            android:layout_below="@id/addButton"
+            android:layout_marginTop="16dp"/>
 
-    </LinearLayout>
 
 
+    </RelativeLayout>
 </FrameLayout>

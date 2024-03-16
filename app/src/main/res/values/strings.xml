@@ -19,6 +19,7 @@
     </string-array>
 
     <string-array name="exercises_array">
+        <item>Rest Days</item>
         <item>Bench Press</item>
         <item>Squats</item>
         <item>Deadlifts</item>
@@ -38,6 +39,7 @@
     </string-array>
 
     <string-array name="set">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -46,6 +48,7 @@
     </string-array>
 
     <string-array name="reps">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>

@@ -102,7 +102,7 @@ public class AddWorkoutScheduleFragment extends Fragment {
         setAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         setsSpinner.setAdapter(setAdapter);
 
-        ArrayAdapter<CharSequence> repAdapter = ArrayAdapter.createFromResource(requireContext(), R.array.set, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> repAdapter = ArrayAdapter.createFromResource(requireContext(), R.array.reps, android.R.layout.simple_spinner_item);
         repAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         repsSpinner.setAdapter(repAdapter);
 

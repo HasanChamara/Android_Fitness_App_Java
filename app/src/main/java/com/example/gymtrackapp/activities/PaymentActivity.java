@@ -73,7 +73,7 @@ public class PaymentActivity extends AppCompatActivity {
                     } else {
                         String errorMsg = "Payment failed. Reason: " + response.getData().getMessage();
                         statusTextView.setText(errorMsg);
-                        
+
                         Toast.makeText(PaymentActivity.this, "Payment failed", Toast.LENGTH_SHORT).show();
                     }
                 } else {

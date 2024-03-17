@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:text="Select Activity Level:"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                     android:textColor="@color/black"
                     android:layout_below="@id/spinnerGoal"
                     android:layout_marginTop="20dp" />
 

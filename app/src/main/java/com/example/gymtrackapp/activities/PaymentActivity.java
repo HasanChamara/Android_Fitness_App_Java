@@ -32,6 +32,9 @@ public class PaymentActivity extends AppCompatActivity {
     private TextView statusTextView;
     private FirebaseFirestore db;
 
+    //4916217501611292
+    //5307732125531191
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +43,8 @@ public class PaymentActivity extends AppCompatActivity {
         statusTextView = findViewById(R.id.status_text_view);
 
         InitRequest req = new InitRequest();
-        req.setMerchantId("1223594");
-        req.setMerchantSecret("MTIxNjYwMjk3NjY3MjEzMTkxMjIzMzM1ODkwMDAyODY4NjA1ODA3");
+        req.setMerchantId("1226224");
+        req.setMerchantSecret("NzA2NTg0MDI5Mjk5Mjk1Mzk4MjI4MTA4MjM3MDEzMjkyNDEzMjM=");
         req.setCurrency("LKR");
         req.setAmount(1000.00);
         req.setOrderId("230000123");

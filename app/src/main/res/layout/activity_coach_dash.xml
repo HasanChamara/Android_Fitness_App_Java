@@ -59,7 +59,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Add schedule"
+                    android:text="Internal Status"
+                    android:onClick="internalStatus"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:gravity="center"

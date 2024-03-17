@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_internal_status.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Select Gym Status"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/statusSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/changeStatusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Status"
+        android:layout_below="@id/statusSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        />
+
+</RelativeLayout>

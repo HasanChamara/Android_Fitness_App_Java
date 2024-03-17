@@ -11,4 +11,13 @@
     <color name="splash_background">#FFFFFF</color>
     <color name="alice_blue">#f0f8ff </color>
     <color name="splash_background_color">#1F41BB</color>
+
+    <color name="status_background">#CCCCCC</color>
+    <color name="overcrowd_background">#FF0000</color>
+    <color name="normal_background">#00FF00</color>
+    <color name="free_background">#0000FF</color>
+
+    <color name="overcrowd_text">#FFFFFF</color>
+    <color name="normal_text">#FFFFFF</color>
+    <color name="free_text">#FFFFFF</color>
 </resources>

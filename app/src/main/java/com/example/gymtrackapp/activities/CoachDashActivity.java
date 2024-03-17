@@ -20,4 +20,10 @@ public class CoachDashActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ManageUserActivity.class);
         startActivity(intent);
     }
+
+    public void internalStatus(View view) {
+        Intent intent = new Intent(this, internalStatusActivity.class);
+        startActivity(intent);
+    }
+
 }

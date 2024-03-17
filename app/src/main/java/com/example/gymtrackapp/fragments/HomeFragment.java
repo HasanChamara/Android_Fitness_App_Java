@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gymtrackapp.R;
@@ -18,6 +21,8 @@ import com.example.gymtrackapp.activities.BMIActivity;
 import com.example.gymtrackapp.activities.MealPlanActivity;
 import com.example.gymtrackapp.activities.PaymentActivity;
 import com.example.gymtrackapp.activities.WorkoutActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -36,7 +41,9 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private FirebaseFirestore db;
+    private LinearLayout statusLayout;
+    private TextView gymStatusTextView;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -77,6 +84,7 @@ public class HomeFragment extends Fragment {
        LinearLayout mealPlanButton = rootView.findViewById(R.id.mealPlanButton);
         LinearLayout BMIButton = rootView.findViewById(R.id.BMIButton);
         LinearLayout workOutButton = rootView.findViewById(R.id.workOutButton);
+        statusLayout = rootView.findViewById(R.id.statusLayout);
 
 
         mealPlanButton.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +105,11 @@ public class HomeFragment extends Fragment {
                 goWorkOut();
             }
         });
+
+        gymStatusTextView = rootView.findViewById(R.id.gymStatusTextView);
+        db = FirebaseFirestore.getInstance();
+        fetchAndDisplayGymStatus();
+
         return rootView;
     }
 
@@ -167,5 +180,35 @@ public class HomeFragment extends Fragment {
                 });
     }
 
-
+    private void fetchAndDisplayGymStatus() {
+        db.collection("gymStatus")
+                .document("status") // Assuming gym status is stored under the document named "status"
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                String gymStatus = document.getString("status");
+                                gymStatusTextView.setText(gymStatus);
+                                if (gymStatus.equals("Overcrowd")) {
+                                    statusLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.overcrowd_background));
+                                    gymStatusTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.overcrowd_text));
+                                } else if (gymStatus.equals("Normal")) {
+                                    statusLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.normal_background));
+                                    gymStatusTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.normal_text));
+                                } else if (gymStatus.equals("Free")) {
+                                    statusLayout.setBackgroundColor(ContextCompat.getColor(requireContext(), R.color.free_background));
+                                    gymStatusTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.free_text));
+                                }
+                            } else {
+                                Toast.makeText(requireContext(), "Gym status document does not exist", Toast.LENGTH_SHORT).show();
+                            }
+                        } else {
+                            Toast.makeText(requireContext(), "Failed to fetch gym status", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
 }

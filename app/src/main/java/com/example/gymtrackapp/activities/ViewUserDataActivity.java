@@ -78,6 +78,13 @@ public class ViewUserDataActivity extends AppCompatActivity {
                             studentIdTextView.setText(user.getStudentId());
                             paymentStatusTextView.setText(user.getPaymentStatus());
                         }
+
+                        if ("pending".equals(user.getPaymentStatus())) {
+                            addWorkOutSchedule.setEnabled(false);
+                            Toast.makeText(this, "User payment is pending. You cannot add a workout schedule until the payment is completed.", Toast.LENGTH_LONG).show();
+                        } else {
+                            addWorkOutSchedule.setEnabled(true);
+                        }
                     } else {
                         Log.d("ViewUserDataActivity", "No such document");
                     }

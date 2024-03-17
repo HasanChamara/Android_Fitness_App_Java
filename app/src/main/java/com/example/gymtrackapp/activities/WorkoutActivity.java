@@ -53,7 +53,7 @@ public class WorkoutActivity extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("exercises")
                 .whereEqualTo("userId", userId)
-                .whereEqualTo("day", day)
+//                .whereEqualTo("day", day)
                 .orderBy("day", Query.Direction.ASCENDING)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {

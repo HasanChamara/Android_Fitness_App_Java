@@ -8,15 +8,23 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gymtrackapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,7 +45,8 @@ public class AddMealPlanFragment extends Fragment {
     private FirebaseFirestore db;
 
     private TextView weightTextView;
-    private TextView goalTextView;
+    private Button addMealPlanButton;
+    private TextView goalTextView ,calorieIntakeTextView,proteinGramsTextView ,fatGramsTextView ,carbGramsTextView ;
 
     public AddMealPlanFragment(String userId) {
         this.userId = userId;
@@ -64,6 +73,13 @@ public class AddMealPlanFragment extends Fragment {
 
         weightTextView = rootView.findViewById(R.id.weightTextView);
         goalTextView = rootView.findViewById(R.id.goalTextView);
+
+        calorieIntakeTextView = rootView.findViewById(R.id.calorieIntakeTextView);
+        proteinGramsTextView = rootView.findViewById(R.id.proteinGramsTextView);
+        fatGramsTextView = rootView.findViewById(R.id.fatGramsTextView);
+        carbGramsTextView = rootView.findViewById(R.id.carbGramsTextView);
+
+        addMealPlanButton = rootView.findViewById(R.id.addMealPlanButton);
 
         fetchAndDisplayBiometricDetails();
 
@@ -151,11 +167,76 @@ public class AddMealPlanFragment extends Fragment {
             carbGrams = 0;
         }
 
-        // Now you can use the calculated values as needed
-        System.out.println("Calorie Intake: " + calorieIntake);
-        System.out.println("Protein Grams: " + proteinGrams);
-        System.out.println("Fat Grams: " + fatGrams);
-        System.out.println("Carb Grams: " + carbGrams);
+
+        calorieIntakeTextView.setText(String.valueOf(calorieIntake));
+        proteinGramsTextView.setText(String.valueOf(proteinGrams));
+        fatGramsTextView.setText(String.valueOf(fatGrams));
+        carbGramsTextView.setText(String.valueOf(carbGrams));
+
+        addMealPlanButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveMealPlanToFirestore( calorieIntake, proteinGrams, fatGrams, carbGrams);
+            }
+        });
 
     }
-}
+
+
+
+        private void saveMealPlanToFirestore(float calorieIntake, float proteinGrams, float fatGrams, float carbGrams) {
+            Map<String, Object> mealPlan = new HashMap<>();
+            mealPlan.put("userId", userId);
+            mealPlan.put("calorieIntake", calorieIntake);
+            mealPlan.put("proteinGrams", proteinGrams);
+            mealPlan.put("fatGrams", fatGrams);
+            mealPlan.put("carbGrams", carbGrams);
+
+            db.collection("MealPlan")
+                    .whereEqualTo("userId", userId)
+                    .get()
+                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                if (task.getResult().isEmpty()) {
+                                    db.collection("MealPlan")
+                                            .add(mealPlan)
+                                            .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                                @Override
+                                                public void onSuccess(DocumentReference documentReference) {
+                                                    Toast.makeText(requireContext(), "New meal plan added successfully", Toast.LENGTH_SHORT).show();
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Toast.makeText(requireContext(), "Failed to add new meal plan", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                } else {
+                                    for (DocumentSnapshot document : task.getResult()) {
+                                        document.getReference().set(mealPlan, SetOptions.merge())
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        Toast.makeText(requireContext(), "Meal plan updated successfully", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                })
+                                                .addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Toast.makeText(requireContext(), "Failed to update meal plan", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                });
+                                    }
+                                }
+                            } else {
+                                Toast.makeText(requireContext(), "Error getting meal plan documents", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        }
+
+
+    }

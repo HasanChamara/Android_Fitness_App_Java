@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,9 +13,12 @@
         <LinearLayout
             android:id="@+id/statusLayout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
-            android:background="@color/status_background">
+            android:layout_gravity="center"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/status_background"> <!-- Add a background color here -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -22,6 +26,7 @@
                 android:padding="16dp"
                 android:text="Gym Status : "
                 android:textColor="@android:color/black"
+                android:background="@drawable/status_background"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -31,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text=""
+                android:background="@drawable/status_background"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />

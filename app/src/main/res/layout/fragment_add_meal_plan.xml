@@ -3,7 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/backgroundimg"
     android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Per Day"
+        android:textSize="30dp"
+        android:textColor="@color/theme_blue"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/weightLabelTextView"
@@ -51,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Calculation logic for calorie "
+        android:text="Calculation DCR And Macros"
         android:layout_marginTop="5dp"
         android:visibility="visible"/>
 
@@ -78,7 +90,7 @@
                     android:id="@+id/carbGramsLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Carb Grams:"
+                    android:text="Carbohydrate Grams:"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:layout_marginBottom="8dp"/>
@@ -156,7 +168,7 @@
                     android:id="@+id/calorieIntakeLabelTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calorie Intake:"
+                    android:text="Total Calorie Intake:"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:layout_marginBottom="8dp"/>
@@ -176,8 +188,10 @@
 
     <Button
         android:id="@+id/addMealPlanButton"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/mybutton"
+        android:layout_marginTop="30dp"
         android:visibility="gone"
         android:layout_height="wrap_content"
         android:text="Add meal plan"/>

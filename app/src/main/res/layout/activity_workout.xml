@@ -4,15 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg"
     tools:context=".activities.WorkoutActivity">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Workout Schedule"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:id="@+id/workoutschedule"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/theme_blue"
+            android:textStyle="bold"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/exerciseRecyclerView"
             android:layout_width="match_parent"
+            android:layout_below="@id/workoutschedule"
             android:layout_height="match_parent"
             android:padding="16dp"
             android:clipToPadding="false"

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Fragment selectedFragment = null;
+        Fragment selectedFragment =null;
 
         switch (item.getItemId()) {
             case R.id.action_setting:

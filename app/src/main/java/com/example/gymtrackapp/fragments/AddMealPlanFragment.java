@@ -91,6 +91,7 @@ public class AddMealPlanFragment extends Fragment {
         addMealPlanButton = rootView.findViewById(R.id.addMealPlanButton);
         progressBar = rootView.findViewById(R.id.progressBar);
         textGone=rootView.findViewById(R.id.textGone);
+
         fetchAndDisplayBiometricDetails();
 
         handler.postDelayed(new Runnable() {

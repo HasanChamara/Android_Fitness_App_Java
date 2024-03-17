@@ -10,6 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash_background">#FFFFFF</color>
     <color name="alice_blue">#f0f8ff </color>
+    <color name="border_color">#212121 </color>
     <color name="splash_background_color">#1F41BB</color>
 
     <color name="status_background">#CCCCCC</color>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.gymtrackapp.MainActivity;
 import com.example.gymtrackapp.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -21,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 // Start MainActivity after the delay
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish(); // Finish the splash activity so that it cannot be returned to
             }

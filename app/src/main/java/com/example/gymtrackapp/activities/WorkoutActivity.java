@@ -45,7 +45,7 @@ public class WorkoutActivity extends AppCompatActivity {
 
 
         String userId = currentUser.getUid();
-
+        String day="Day 2";
 
 //        String userId = "JOsnkzcVJnMlVPkaPITqGDoqVOj1";
 
@@ -53,6 +53,7 @@ public class WorkoutActivity extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("exercises")
                 .whereEqualTo("userId", userId)
+                .whereEqualTo("day", day)
                 .orderBy("day", Query.Direction.ASCENDING)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {

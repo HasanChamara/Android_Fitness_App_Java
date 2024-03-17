@@ -182,7 +182,7 @@ public class HomeFragment extends Fragment {
 
     private void fetchAndDisplayGymStatus() {
         db.collection("gymStatus")
-                .document("status") // Assuming gym status is stored under the document named "status"
+                .document("status")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override

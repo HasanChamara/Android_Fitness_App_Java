@@ -125,7 +125,7 @@ public class AddMealPlanFragment extends Fragment {
         float carbGrams;
 
         // Calculate total calorie intake based on weight and goal
-        if (goal.equals("Muscle building")) {
+        if (goal.equals("Muscle Building")) {
             calorieIntake = weight * 22; // Example formula for muscle building goal
         } else if (goal.equals("Fat loss")) {
             calorieIntake = weight * 12; // Example formula for fat loss goal
@@ -135,7 +135,7 @@ public class AddMealPlanFragment extends Fragment {
         }
 
         // Calculate macronutrients based on goal
-        if (goal.equals("Muscle building")) {
+        if (goal.equals("Muscle Building")) {
             proteinGrams = calorieIntake * PROTEIN_RATIO_MUSCLE_BUILDING / CALORIES_PER_GRAM_PROTEIN;
             fatGrams = calorieIntake * FAT_RATIO_MUSCLE_BUILDING / CALORIES_PER_GRAM_FAT;
             carbGrams = calorieIntake * CARBS_RATIO_MUSCLE_BUILDING / CALORIES_PER_GRAM_CARBS;

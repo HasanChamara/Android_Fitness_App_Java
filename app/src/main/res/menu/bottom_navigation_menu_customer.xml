@@ -4,7 +4,7 @@
         android:id="@+id/action_setting"
         android:icon="@drawable/setting1"
         android:color="@android:color/black"
-        android:title="Setting" />
+        android:title="Bio" />
 
     <item
         android:id="@+id/action_home"

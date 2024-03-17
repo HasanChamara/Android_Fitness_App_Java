@@ -1,14 +1,18 @@
 package com.example.gymtrackapp.fragments;
 
+
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +21,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -46,7 +51,11 @@ public class AddMealPlanFragment extends Fragment {
 
     private TextView weightTextView;
     private Button addMealPlanButton;
-    private TextView goalTextView ,calorieIntakeTextView,proteinGramsTextView ,fatGramsTextView ,carbGramsTextView ;
+    private ProgressBar progressBar;
+    private TextView goalTextView ,calorieIntakeTextView,proteinGramsTextView ,fatGramsTextView ,carbGramsTextView,textGone ;
+    private MaterialCardView mealPlanCardView;
+    private Handler handler = new Handler();
+    private static final int DELAY_DURATION = 5000;
 
     public AddMealPlanFragment(String userId) {
         this.userId = userId;
@@ -78,15 +87,27 @@ public class AddMealPlanFragment extends Fragment {
         proteinGramsTextView = rootView.findViewById(R.id.proteinGramsTextView);
         fatGramsTextView = rootView.findViewById(R.id.fatGramsTextView);
         carbGramsTextView = rootView.findViewById(R.id.carbGramsTextView);
-
+        mealPlanCardView = rootView.findViewById(R.id.mealPlanCardView);
         addMealPlanButton = rootView.findViewById(R.id.addMealPlanButton);
-
+        progressBar = rootView.findViewById(R.id.progressBar);
+        textGone=rootView.findViewById(R.id.textGone);
         fetchAndDisplayBiometricDetails();
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mealPlanCardView.setVisibility(View.VISIBLE);
+                addMealPlanButton.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
+                textGone.setVisibility(View.GONE);
+            }
+        }, DELAY_DURATION);
 
         return rootView;
     }
 
     private void fetchAndDisplayBiometricDetails() {
+
         db.collection("biometricDetails")
                 .whereEqualTo("userID", userId)
                 .get()

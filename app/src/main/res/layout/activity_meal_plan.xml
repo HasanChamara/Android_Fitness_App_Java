@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/backgroundimg"
     android:padding="16dp">
 
@@ -13,16 +14,28 @@
         android:textColor="@color/theme_blue"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:textStyle="bold"
-        android:textSize="35dp"/>
+        android:textSize="45dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/daily"
+        android:text="Consistently Consume"
+        android:layout_below="@+id/mealplantitle"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/theme_blue"
+        android:layout_marginBottom="30dp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_below="@id/mealplantitle"
+        app:cardBackgroundColor="@color/card_view_bgcolor"
+        android:layout_below="@id/daily"
         android:elevation="4dp">
 
         <LinearLayout
@@ -31,73 +44,107 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
-                android:id="@+id/calorieIntakeLabelTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Calorie Intake:"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/calorieIntakeTextView"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp">
 
-            <TextView
-                android:id="@+id/proteinGramsLabelTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Protein Grams:"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/calorieIntakeLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calorie Intake:"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/calorieIntakeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/proteinGramsTextView"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp">
 
-            <TextView
-                android:id="@+id/fatGramsLabelTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fat Grams:"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/proteinGramsLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Protein Grams:"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/proteinGramsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/fatGramsTextView"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp">
 
-            <TextView
-                android:id="@+id/carbGramsLabelTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Carb Grams:"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/fatGramsLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fat Grams:"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/fatGramsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/carbGramsTextView"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/carbGramsLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carbohydrate Grams:"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+                <TextView
+                    android:id="@+id/carbGramsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"/>
+            </RelativeLayout>
+
 
         </LinearLayout>
 

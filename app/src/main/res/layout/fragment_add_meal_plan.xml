@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/backgroundimg"
     android:padding="16dp">
@@ -70,6 +71,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/mealPlanCardView"
         android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/card_view_bgcolor"
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:layout_marginTop="10dp">

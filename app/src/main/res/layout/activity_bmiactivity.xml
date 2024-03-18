@@ -16,23 +16,23 @@
         android:text="BMI Result"
         android:textColor="@color/theme_blue"
         android:textStyle="bold"
-        android:textSize="40dp"
+        android:textSize="45dp"
         android:gravity="center"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BMI Score"
-        android:layout_marginTop="40dp"
-        android:textSize="27dp"
+        android:layout_marginTop="70dp"
+        android:textSize="35dp"
         android:gravity="center"/>
 
     <TextView
         android:layout_width="match_parent"
         android:id="@+id/bmiValue"
         android:layout_height="wrap_content"
-        android:textSize="65dp"
+        android:textSize="70dp"
         android:gravity="center"
         android:textStyle="bold"
         android:layout_marginTop="30dp"/>
@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/categoryTextView"
-        android:textSize="35dp"
+        android:textSize="40dp"
         android:layout_marginTop="5dp"
         android:textStyle="bold"
         android:gravity="center"/>
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/bmiCardView"
         app:cardBackgroundColor="@color/card_view_bgcolor"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="70dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/importentTextView"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:padding="8dp"
             android:layout_marginTop="5dp"/>
 
@@ -74,7 +74,7 @@
             android:id="@+id/messageTextView"
             android:padding="8dp"
             android:layout_marginBottom="15dp"
-            android:textSize="16dp"/>
+            android:textSize="20dp"/>
 
     </LinearLayout>
 

@@ -10,7 +10,75 @@
     android:padding="16dp"
     tools:context=".activities.BMIActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI Result"
+        android:textColor="@color/theme_blue"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BMI Score"
+        android:layout_marginTop="40dp"
+        android:textSize="27dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/bmiValue"
+        android:layout_height="wrap_content"
+        android:textSize="65dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryTextView"
+        android:textSize="35dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bmiCardView"
+        app:cardBackgroundColor="@color/card_view_bgcolor"
+        android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/importentTextView"
+            android:textSize="25dp"
+            android:padding="8dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/messageTextView"
+            android:padding="8dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
     <TextView
         android:id="@+id/resultTextView"

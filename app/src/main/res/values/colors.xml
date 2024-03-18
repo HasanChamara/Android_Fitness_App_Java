@@ -12,7 +12,11 @@
     <color name="alice_blue">#f0f8ff </color>
     <color name="border_color">#212121 </color>
     <color name="splash_background_color">#1F41BB</color>
-
+    <color name="card_view_bgcolor">#f6f8f1</color>
+    <color name="green_color">#73b143</color>
+    <color name="yellow_color">#FDDA0D</color>
+    <color name="orange_red_color">#FF4500</color>
+    <color name="cadmium_red_color">#D22B2B</color>
     <color name="status_background">#CCCCCC</color>
     <color name="overcrowd_background">#FF0000</color>
     <color name="normal_background">#FFEB3B</color>

@@ -32,8 +32,8 @@ public class AddScheduleActivity extends AppCompatActivity {
 
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), userId);
 
-        adapter.addFragment(AddWorkoutScheduleFragment.newInstance(userId), "Add Workout Schedule");
         adapter.addFragment(AddMealPlanFragment.newInstance(userId), "Add Meal Plan");
+        adapter.addFragment(AddWorkoutScheduleFragment.newInstance(userId), "Add Workout Schedule");
 
 
         viewPager.setAdapter(adapter);

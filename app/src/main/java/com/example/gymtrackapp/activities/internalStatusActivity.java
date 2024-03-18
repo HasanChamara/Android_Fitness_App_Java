@@ -5,6 +5,7 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.gymtrackapp.MainActivity;
 import com.example.gymtrackapp.R;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -57,6 +59,7 @@ public class internalStatusActivity extends AppCompatActivity {
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
+                                startActivity(new Intent(internalStatusActivity.this, CoachDashActivity.class));
                                 Toast.makeText(internalStatusActivity.this, "Status updated successfully", Toast.LENGTH_SHORT).show();
                             }
                         })

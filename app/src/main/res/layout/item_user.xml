@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:background="@color/alice_blue"
     android:layout_height="wrap_content"
+    android:backgroundTint="@color/card_view_bgcolor"
 android:layout_marginTop="5dp"
     android:padding="16dp">
 

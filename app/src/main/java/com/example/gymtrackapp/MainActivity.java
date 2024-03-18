@@ -1,7 +1,5 @@
 package com.example.gymtrackapp;
 
-import static androidx.core.content.ContentProviderCompat.requireContext;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -15,7 +13,7 @@ import android.view.MenuItem;
 import com.example.gymtrackapp.activities.LoginActivity;
 import com.example.gymtrackapp.fragments.HomeFragment;
 import com.example.gymtrackapp.fragments.ProfileFragment;
-import com.example.gymtrackapp.fragments.SettingFragment;
+import com.example.gymtrackapp.fragments.BiometricFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         switch (item.getItemId()) {
             case R.id.action_setting:
-                selectedFragment = new SettingFragment();
+                selectedFragment = new BiometricFragment();
                 break;
             case R.id.action_home:
                 selectedFragment = new HomeFragment();

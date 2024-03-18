@@ -1,7 +1,5 @@
 package com.example.gymtrackapp.fragments;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -26,17 +24,16 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
 
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SettingFragment#newInstance} factory method to
+ * Use the {@link BiometricFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SettingFragment extends Fragment {
+public class BiometricFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +55,7 @@ public class SettingFragment extends Fragment {
     private ProgressBar progressBar;
 
     private Button submitButton;
-    public SettingFragment() {
+    public BiometricFragment() {
         // Required empty public constructor
     }
 
@@ -71,8 +68,8 @@ public class SettingFragment extends Fragment {
      * @return A new instance of fragment SettingFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SettingFragment newInstance(String param1, String param2) {
-        SettingFragment fragment = new SettingFragment();
+    public static BiometricFragment newInstance(String param1, String param2) {
+        BiometricFragment fragment = new BiometricFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

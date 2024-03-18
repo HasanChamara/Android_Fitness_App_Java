@@ -90,15 +90,19 @@ public class PaymentActivity extends AppCompatActivity {
                         startActivity(new Intent(PaymentActivity.this, MainActivity.class));
                     } else {
 
+                        startActivity(new Intent(PaymentActivity.this, MainActivity.class));
                         Toast.makeText(PaymentActivity.this, "Payment failed", Toast.LENGTH_SHORT).show();
                     }
                 } else {
+                    startActivity(new Intent(PaymentActivity.this, MainActivity.class));
                     Toast.makeText(PaymentActivity.this, "Payment failed", Toast.LENGTH_SHORT).show();
                 }
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 if (response != null) {
+                    startActivity(new Intent(PaymentActivity.this, MainActivity.class));
                     Toast.makeText(PaymentActivity.this, "Payment failed", Toast.LENGTH_SHORT).show();
                 } else {
+                    startActivity(new Intent(PaymentActivity.this, MainActivity.class));
                     Toast.makeText(PaymentActivity.this, "User canceled the request", Toast.LENGTH_SHORT).show();
                 }
             }

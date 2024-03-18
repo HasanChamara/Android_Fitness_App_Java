@@ -1,5 +1,6 @@
 package com.example.gymtrackapp.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -184,6 +185,7 @@ public class BiometricFragment extends Fragment {
                                 .addOnSuccessListener(aVoid -> {
                                     Toast.makeText(requireContext(), "Biometric details updated successfully!", Toast.LENGTH_SHORT).show();
                                     clearFieldsAndEnableButton();
+
                                 })
                                 .addOnFailureListener(e -> {
                                     Toast.makeText(requireContext(), "Error updating biometric details: " + e.getMessage(), Toast.LENGTH_SHORT).show();

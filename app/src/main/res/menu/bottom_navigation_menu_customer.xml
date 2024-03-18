@@ -10,7 +10,7 @@
         android:id="@+id/action_home"
         android:icon="@drawable/home"
         android:color="@android:color/black"
-        android:title="Home" />
+        android:title="Home"/>
 
     <item
         android:id="@+id/action_profile"

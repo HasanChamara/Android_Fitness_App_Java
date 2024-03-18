@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.gymtrackapp.activities.LoginActivity;
@@ -17,6 +18,9 @@ import com.example.gymtrackapp.fragments.BiometricFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+
+    //4916217501611292
+    //5307732125531191
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             finish();
             return;
         }
+
+        // Select the "Home" menu item programmatically
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.findItem(R.id.action_home);
+        menuItem.setChecked(true);
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragmentContainerCustomer, new HomeFragment())
@@ -66,4 +75,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         return false;
     }
+
 }

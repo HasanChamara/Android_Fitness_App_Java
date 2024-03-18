@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gymtrackapp.R;
-import com.example.gymtrackapp.fragments.HomeFragment;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,6 +33,7 @@ public class PaymentActivity extends AppCompatActivity {
 
     //4916217501611292
     //5307732125531191
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class PaymentActivity extends AppCompatActivity {
                         updatePaymentStatus(userID);
 
                         Toast.makeText(PaymentActivity.this, "Payment success", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(PaymentActivity.this, HomeFragment.class));
+                        startActivity(new Intent(PaymentActivity.this, MealPlanActivity.class));
                     } else {
 
                         Toast.makeText(PaymentActivity.this, "Payment failed", Toast.LENGTH_SHORT).show();
@@ -123,4 +123,5 @@ public class PaymentActivity extends AppCompatActivity {
                     }
                 });
     }
+
 }

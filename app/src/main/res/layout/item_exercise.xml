@@ -7,6 +7,7 @@
     app:cardCornerRadius="8dp"
     app:strokeWidth="2dp"
     app:strokeColor="@color/border_color"
+    android:backgroundTint="@color/card_view_bgcolor"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout

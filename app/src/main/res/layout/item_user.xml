@@ -49,24 +49,6 @@ android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:padding="6dp">
 
-        <ImageView
-            android:id="@+id/editProductImageView"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="Edit Icon"
-            android:src="@drawable/view" />
-
-        <Space
-            android:layout_width="15dp"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:id="@+id/deleteProductImageView"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:contentDescription="Delete Icon"
-            android:src="@drawable/trash" />
-
     </LinearLayout>
 
 </LinearLayout>

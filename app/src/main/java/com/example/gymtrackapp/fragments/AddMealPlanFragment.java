@@ -78,6 +78,7 @@ public class AddMealPlanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_add_meal_plan, container, false);
+
         db = FirebaseFirestore.getInstance();
 
         weightTextView = rootView.findViewById(R.id.weightTextView);
@@ -165,7 +166,7 @@ public class AddMealPlanFragment extends Fragment {
         // Calculate total calorie intake based on weight and goal
         if (goal.equals("Muscle Building")) {
             calorieIntake = weight * 22; // Example formula for muscle building goal
-        } else if (goal.equals("Fat loss")) {
+        } else if (goal.equals("Fat Lost")) {
             calorieIntake = weight * 12; // Example formula for fat loss goal
         } else {
             // Default case if goal is neither muscle building nor fat loss
@@ -177,7 +178,7 @@ public class AddMealPlanFragment extends Fragment {
             proteinGrams = calorieIntake * PROTEIN_RATIO_MUSCLE_BUILDING / CALORIES_PER_GRAM_PROTEIN;
             fatGrams = calorieIntake * FAT_RATIO_MUSCLE_BUILDING / CALORIES_PER_GRAM_FAT;
             carbGrams = calorieIntake * CARBS_RATIO_MUSCLE_BUILDING / CALORIES_PER_GRAM_CARBS;
-        } else if (goal.equals("Fat loss")) {
+        } else if (goal.equals("Fat Lost")) {
             proteinGrams = calorieIntake * PROTEIN_RATIO_FAT_LOSS / CALORIES_PER_GRAM_PROTEIN;
             fatGrams = calorieIntake * FAT_RATIO_FAT_LOSS / CALORIES_PER_GRAM_FAT;
             carbGrams = calorieIntake * CARBS_RATIO_FAT_LOSS / CALORIES_PER_GRAM_CARBS;
